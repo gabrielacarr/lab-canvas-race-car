@@ -64,3 +64,13 @@ document.body.onkeypress = function(e){
         car.y+=10; 
     }
 }
+function animate(){ //Where the magic happens
+    ctx.clearRect(0, 0, canvas.width, canvas.height) //clears the canvas - flipping to a blank page
+
+    drawCar() //Drawing the car 
+    // drawPurpleSquare() //Draw your things
+    // detectCollision()
+
+    animateId = window.requestAnimationFrame(animate) //Game rendering -infinite loop that goes super fast
+}
+animate()
